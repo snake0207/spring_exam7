@@ -11,10 +11,16 @@ public class MainClass {
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load(cfg);
 		ctx.refresh();
+
 		Student student = ctx.getBean("student", Student.class);
 		System.out.println(student.getName());
 		System.out.println(student.getAge());
 		
+		OtherStudent other = ctx.getBean("other", OtherStudent.class);
+		System.out.println(other.getName());
+		System.out.println(other.getAge());
+		
+	
 		ctx.close();
 	}
 
