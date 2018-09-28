@@ -16,4 +16,8 @@ public class OtherStudent {
 		this.age = age;
 	}
 
+	
+	public void initMethod() {
+		System.out.println("initMethod..");
+	}
 }
